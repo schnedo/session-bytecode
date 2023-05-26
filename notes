@@ -1,0 +1,24 @@
+Start:
+EmtpyClass.java compilieren & bytecode öffnen
+(hexdump in vim anschauen: :%! xxd)
+
+
+Wie ist bytecode aufgebaut? : https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html#jvms-4.1
+
+javap
+
+ClassWithEmptyConstructor -> Kein Unterschied zu EmtpyClass
+
+Code:
+ClassWithContructor
+Wie funktioniert bytecode / Wie sieht eigentlich die jvm aus? -> https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-2.html
+
+(Hinweis: Parameter haben implizit `this` als erstes Argument. Daher lädt aload_0 immer `this` auf den Stack)
+
+jvm instruction set: https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-6.html
+
+Referenzen:
+wikipedia bytecode: https://en.wikipedia.org/wiki/Java_bytecode#cite_note-jvm-2
+javap: https://www.baeldung.com/java-class-view-bytecode
+asm: https://www.baeldung.com/java-asm
+jvm 17 spec: https://docs.oracle.com/javase/specs/jvms/se17/html/index.html
